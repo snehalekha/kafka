@@ -5,9 +5,11 @@ services:
        container_name: kafka
        hostname: kafka
        ports:
-          - "2181:2181"
           - "9092:9092"
-          - "29092:29092"
+          - "9093:9093"
+          - "9094:9094"
        volumes:
-          - ~/kafka-logs:/tmp/kafka-logs
           - ~/zookeeper:/tmp/zookeeper
+          - ~/kafka-logs:/tmp/kafka-logs
+          - ~/kafka1-logs:/tmp/kafka1-logs
+          - ~/kafka2-logs:/tmp/kafka2-logs
